@@ -1,15 +1,24 @@
 <script setup>
 import { ref, provide } from "vue";
-import Footer from "./Footer.vue";
+import { RouterView } from 'vue-router'; 
+import TopBar from "./TopBar.vue";
 import Header from "./Header.vue";
+import Footer from "./Footer.vue";
+import TopBarVue from "./TopBar.vue";
+
 </script>
 
 <template>
-    <div class="layout-wrapper flex flex-col min-h-screen">
-        <div class="layout-main-container flex flex-col flex-1">
-            <div class="layout-main flex-1 m-24 mt-5">
-                <RouterView />
-            </div>
-        </div>
+    <div class="layout-wrapper flex flex-col bg-[#111827] min-h-screen">
+      <!-- Menu (Top Bar) -->
+      <TopBarVue />
+  
+      <!-- Main Content -->
+      <div class="layout-main flex-1">
+        <RouterView /> <!-- This is where the routed components (pages) will be rendered -->
+      </div>
+  
+      <!-- Footer -->
+      <Footer />
     </div>
-</template>
+  </template>

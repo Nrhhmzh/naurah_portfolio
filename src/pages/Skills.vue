@@ -1,5 +1,5 @@
 <template>
-  <div>Naurah@2025</div>
+  
 </template>
 
 <script>
