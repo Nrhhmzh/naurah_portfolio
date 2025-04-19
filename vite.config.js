@@ -12,4 +12,5 @@ export default defineConfig({
   server: {
     port: 5000, // change according what we want
   },
+  base: '/naurah-portfolio/',
 });
